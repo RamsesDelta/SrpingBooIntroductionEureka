@@ -1,0 +1,48 @@
+package com.detalle.armas.service;
+
+import com.detalle.armas.cliente.PistolaClientesRest;
+import com.detalle.armas.models.Detalle;
+import com.detalle.armas.models.Pistola;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+@Service
+@Primary
+public class DetalleServiceFeign implements DetalleService {
+
+    @Autowired
+    private PistolaClientesRest clienteFeign;
+
+    @Override
+    public List<Detalle> findAll() {
+        return clienteFeign.listar().stream().map(p -> new Detalle(p,1)).collect(Collectors.toList());
+    }
+
+    @Override
+    public Detalle findById(Long id, int letalidad) {
+        return new Detalle(clienteFeign.detalle(id),letalidad);
+    }
+
+	@Override
+	public Pistola save(Pistola pistola) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Pistola update(Pistola pistola, Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+		
+	}
+}

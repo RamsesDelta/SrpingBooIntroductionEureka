@@ -1,0 +1,13 @@
+spring.application.name=servicio-zuul-server
+server.port=8090
+
+eureka.client.service-url.deaultZone=http://localhost:8761/eureka
+
+zuul.routes.pistolas.service-id=servicio-armas
+zuul.routes.pistolas.path=/api/pistolas/**
+
+zuul.routes.detalles.service-id=servicio-datelle
+zuul.routes.detalles.path=/api/detalle/**
+
+zuul.routes.detalles.service-id=servicio-usuarios
+zuul.routes.detalles.path=/api/detalle/**

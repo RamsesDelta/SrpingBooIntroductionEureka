@@ -1,0 +1,13 @@
+package com.usuarios.models.dao;
+
+import org.springframework.data.repository.PagingAndSortingRepository;
+
+import com.usuarios.models.entity.Usuario;
+
+public interface UsuarioDao extends PagingAndSortingRepository<Usuario, Long> {
+	
+	public Usuario findByUsername(String username);
+	
+	
+
+}

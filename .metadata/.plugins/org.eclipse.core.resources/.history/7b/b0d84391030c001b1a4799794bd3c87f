@@ -1,0 +1,6 @@
+package com.zuul.server.filters;
+
+@Component
+public class PreTiempoTranscurridoFilter {
+
+}

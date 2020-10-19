@@ -1,0 +1,6 @@
+package com.oauth.security;
+
+@Component
+public class InfoAdicionalToken {
+
+}

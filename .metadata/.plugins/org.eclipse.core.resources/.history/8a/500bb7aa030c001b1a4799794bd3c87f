@@ -1,0 +1,8 @@
+package com.zuul.server.filters;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class PreTiempoTranscurridoFilter extends ZuulFilter {
+
+}

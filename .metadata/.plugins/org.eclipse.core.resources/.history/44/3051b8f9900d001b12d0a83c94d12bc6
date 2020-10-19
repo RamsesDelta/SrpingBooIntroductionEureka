@@ -1,0 +1,17 @@
+package com.detalle.armas.service;
+
+import com.detalle.armas.models.Detalle;
+import com.detalle.armas.models.Pistola;
+
+import java.util.List;
+
+public interface DetalleService {
+
+    public List<Detalle> findAll();
+
+    public Detalle findById(Long id, int letalidad);
+    
+    public Pistola save(Pistola pistola);
+    
+    
+}

@@ -1,0 +1,5 @@
+package com.usuarios.models.dao;
+
+public interface UsuarioDao {
+
+}

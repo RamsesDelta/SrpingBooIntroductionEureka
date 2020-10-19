@@ -1,0 +1,5 @@
+package com.usuarios.models.entity;
+@Entity
+public class Usuario {
+
+}

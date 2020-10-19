@@ -1,0 +1,19 @@
+package com.detalle.armas;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
+import org.springframework.cloud.openfeign.EnableFeignClients;
+
+@EnableCircuitBreaker
+@EnableFeignClients
+@SpringBootApplication
+@EntityScan({"com.commons.models.entity"})
+public class ServicioDetalleArmasApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ServicioDetalleArmasApplication.class, args);
+	}
+
+}

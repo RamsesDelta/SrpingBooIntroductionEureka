@@ -1,0 +1,7 @@
+package com.oauth.services;
+
+public interface IUsuarioService {
+
+	public Usuario findByUsername
+	
+}
